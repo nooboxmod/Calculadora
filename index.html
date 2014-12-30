@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style/calculator.css">
+    <script type="text/javascript" src="js/calculator.js" defer></script>
+</head>
+<body>
+    <div id="calc-wrapper">
+        <div class="row">
+            <input name="display" disabled id="display" value="0" maxlength="20">
+            <input value="<" id="clear" data-type="command" type="button">
+      </div>
+        
+        <div class="row">
+            <input value="7" data-type="value" type="button">
+            <input value="8" data-type="value" type="button">
+            <input value="9" data-type="value" type="button">
+            <input value="×" id="multiply" data-type="operator" type="button">
+        </div>
+        
+        <div class="row">
+            <input value="4" data-type="value" type="button">
+            <input value="5" data-type="value" type="button">
+            <input value="6" data-type="value" type="button">
+            <input value="-" id="subtract" data-type="operator" type="button">
+        </div>
+        
+        <div class="row">
+            <input value="1" data-type="value" type="button">
+            <input value="2" data-type="value" type="button">
+            <input value="3" data-type="value" type="button">
+            <input value="+" id="add" data-type="operator" type="button">
+        </div>
+        
+        <div class="row">
+            <input value="0" data-type="value" type="button">
+            <input value="." data-type="value" type="button">
+            <input value="=" data-type="command" type="button">
+            <input value="÷" id="divide" data-type="operator" type="button">
+        </div>
+    </div>   
+</body>
+</html>

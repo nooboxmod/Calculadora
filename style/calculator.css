@@ -1,0 +1,97 @@
+﻿* {
+  -moz-box-sizing: border-box; margin:0; padding:0;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: white;
+  font-family: 'Open Sans Semibold', sans-serif;
+  font-size: 2.5mozmm;
+  background:#000;
+}
+
+input {
+  font-family: 'Open Sans Semibold', sans-serif;
+}
+.multiply{ background-color:#FFF;}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/Open-Sans.woff');
+}
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-weight: bold;
+  src: url('fonts/Open-Sans-Bold.woff');
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
+  font-weight: 600;
+  src: url('fonts/Open-Sans-Semibold.woff');
+}
+
+#calc-wrapper {
+  -moz-box-orient: vertical;
+  display: -moz-box;
+  height: 100%;
+  width: 100%;
+  padding: 0 0 5px 5px;
+}
+
+.row {
+  display: -moz-box;
+  display: -webkit-box;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+}
+input {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  font-size: 200%;
+  display: block;
+  width: 30px;
+  margin: 3px 3px 0 0;
+  -moz-box-align: stretch;
+  -webkit-box-align: stretch;
+}
+
+#display {
+	width: 360px;
+  -moz-box-flex: 20;
+  -webkit-box-flex: 20;
+  border-radius: 5px;
+  padding: 0 9px;
+  text-align:right;
+  font-size: 170% ;
+  border: 0;
+  word-spacing:-15px;
+  word-wrap: break-word;
+  margin:7px;
+  background:#000;
+  color:#FFF;
+}
+
+#display.error {
+  background: none repeat scroll 0 0 rgba(255, 0, 0, 0.3);
+}
+
+input {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border:0;
+  color: white;
+}
+
+#bar-sup{ width:200px; margin: 5px 5px 0px 0px; background:#212021}
+
+[value='0'],[value='1'],[value='2'],[value='3'],[value='4'],[value='5'],[value='6'],[value='7'],[value='8'],[value='9'],[value='.']{ background:#424542;  width:80px; height:10px;}
+[value='='],[value='×'],[value='-'],[value='+'],[value='÷']{ background:#212021; width:80px; height:10px;}
+[value='<']{ background:#212021; width:40px; height:10px;}
+
+
+
+

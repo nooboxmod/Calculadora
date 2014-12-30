@@ -1,0 +1,38 @@
+{
+  "name": "Calculadora",
+  "description": "Calculator NooboxMOD",
+  "launch_path": "/index.html",
+  
+  "icons": {
+    "84":  "/icons/84.png",
+    "128": "/icons/128.png",
+    "142": "/icons/142.png",
+    "189": "/icons/189.png",
+    "256": "/icons/256.png",
+    "284": "/icons/284.png"
+  },
+  "version": "1.2.1",
+  "developer": {
+    "name": "Noobox",
+    "url": "http://noobox.org"
+  },
+  "default_locale": "pt",
+  "locales": {
+    "en": {
+      "name": "Calculator",
+      "description": "Calculator"
+    },
+    "fr": {
+      "name": "Calculatrice",
+      "description": "Calculatrice"
+    },
+    "es": {
+      "name": "Calculadora",
+      "description": "Calculadora"
+    },
+    "pt": {
+      "name": "Calculadora",
+      "description": "Calculator for NooboxMOD"
+    }
+  }
+}
