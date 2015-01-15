@@ -1,8 +1,8 @@
 {
   "name": "Calculadora",
   "description": "Calculator NooboxMOD",
-  "launch_path": "/index.html",
-  
+  "launch_path": "/index.html", 
+  "origin": "app://calculator.gaiamobile.org",
   "icons": {
     "84":  "/icons/84.png",
     "128": "/icons/128.png",
@@ -11,7 +11,7 @@
     "256": "/icons/256.png",
     "284": "/icons/284.png"
   },
-  "version": "1.2.1",
+  "version": "1.2.2",
   "developer": {
     "name": "Noobox",
     "url": "http://noobox.org"
