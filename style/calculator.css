@@ -66,14 +66,18 @@ input {
   border-radius: 5px;
   padding: 0 9px;
   text-align:right;
-  font-size: 170% ;
   border: 0;
   word-spacing:-15px;
   word-wrap: break-word;
   margin:7px;
   background:#000;
   color:#FFF;
+  resize:none;
+  clear: both;
+  font-size-adjust:inherit;
+  font-size:24px;
 }
+
 
 #display.error {
   background: none repeat scroll 0 0 rgba(255, 0, 0, 0.3);
@@ -88,9 +92,9 @@ input {
 
 #bar-sup{ width:200px; margin: 5px 5px 0px 0px; background:#212021}
 
-[value='0'],[value='1'],[value='2'],[value='3'],[value='4'],[value='5'],[value='6'],[value='7'],[value='8'],[value='9'],[value='.']{ background:#424542;  width:80px; height:10px;}
-[value='='],[value='×'],[value='-'],[value='+'],[value='÷']{ background:#212021; width:80px; height:10px;}
-[value='<']{ background:#212021; width:40px; height:10px;}
+[value='0'],[value='1'],[value='2'],[value='3'],[value='4'],[value='5'],[value='6'],[value='7'],[value='8'],[value='9'],[value='.']{ background:#424542;  width:80px; height:10px; cursor:pointer;}
+[value='='],[value='×'],[value='-'],[value='+'],[value='÷']{ background:#212021; width:80px; height:10px; cursor:pointer;}
+[value='<']{ background:#212021; width:40px; height:10px; cursor:pointer;}
 
 
 

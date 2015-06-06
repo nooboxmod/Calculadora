@@ -6,11 +6,90 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style/calculator.css">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <script type="text/javascript" src="js/calculator.js" defer></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    "use strict";
+
+var touchEvent = (function() {
+	var
+	  startTime = null
+	, endTime = null
+	, eventName = null
+	, isMove = false
+	, isTouched = false
+	, holdTime = 1;
+
+	var getPointTime = function() {
+	  var date = new Date();
+	 	return date.getTime();
+	};
+
+	return {
+        
+        // Inicio do toque na tela
+		startEv: function(event) {
+			this.isTouched = true;
+            
+            // Guarda o momento que foi iniciado o toque na tela
+	        this.startTime = getPointTime();
+		},
+		moveEv: function(event) {
+            
+            // Verifica se o toque na tela foi iniciado
+			if(this.isTouched) {
+				this.isMove = true;
+			}
+		},
+		endEv: function(event) {
+			this.isTouched = false;
+            
+            // Guarda o momento que foi terminado o toque na tela
+	        this.endTime = getPointTime();
+
+            // Evento LongTap
+            if( !this.isMove ) { // Verifica se houve movimentação no toque (swipe)
+                
+                if( ((this.endTime - this.startTime) / 1000) > holdTime ) {//Verifica o tempo que ficou segurando o toque na tela. Para disparar o evento é necessário 1s.
+                    
+                    this.eventName = $("#clear").load( href +" #clear"); 
+                    event.target.innerHTML = this.eventName;
+                    window.setTimeout(function() {
+                        event.target.innerHTML = "";
+                    }, 1000);
+                    return;
+                }
+            }
+		},
+		getEventName: function() {
+			return this.eventName;
+		}
+
+	};
+})();
+
+
+window.onload = function() {
+	var el = document.getElementById('toucharea');
+
+	// TouchStart or MouseDown
+	el.addEventListener('touchstart', touchEvent.startEv, false);
+	el.addEventListener('mousedown', touchEvent.startEv, false);
+
+	// TouchMove or MouseMove
+	el.addEventListener('touchmove', touchEvent.moveEv, false);
+	el.addEventListener('mousemove', touchEvent.moveEv, false);
+
+	// TouchEnd or MouseUp
+	el.addEventListener('touchend', touchEvent.endEv, false);
+	el.addEventListener('mouseup', touchEvent.endEv, false);
+
+}
+    </script>
 </head>
 <body>
     <div id="calc-wrapper">
         <div class="row">
-            <input name="display" disabled id="display" value="0" maxlength="20">
+            <textarea name="display"  id="display"></textarea>
             <input value="<" id="clear" data-type="command" type="button">
       </div>
         
